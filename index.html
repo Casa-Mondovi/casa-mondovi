@@ -3,200 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa Mondovi</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #667eea;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #667eea;
-        }
-
-        main {
-            padding: 4rem 0;
-        }
-
-        .hero {
-            text-align: center;
-            color: white;
-            margin-bottom: 4rem;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: 300;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .feature-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-card h3 {
-            color: #667eea;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .feature-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        footer {
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 4rem;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .features {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <title>Casa Mondovi - Rental Property</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">Casa Mondovi</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="container">
-        <section class="hero" id="home">
-            <h1>Welcome to Casa Mondovi</h1>
-            <p>Your perfect destination for comfort, luxury, and unforgettable experiences</p>
-            <a href="#contact" class="cta-button">Get Started</a>
-        </section>
-
-        <section class="features">
-            <div class="feature-card">
-                <h3>Luxury Accommodations</h3>
-                <p>Experience the finest in comfort and style with our premium accommodations designed to exceed your expectations.</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Casa Mondovi</h2>
             </div>
-            <div class="feature-card">
-                <h3>Exceptional Service</h3>
-                <p>Our dedicated team is committed to providing you with personalized service and attention to every detail.</p>
+            <div class="nav-menu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
-            <div class="feature-card">
-                <h3>Prime Location</h3>
-                <p>Located in the heart of the most beautiful destinations, offering easy access to attractions and amenities.</p>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </section>
-    </main>
+        </div>
+    </nav>
 
-    <footer>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Casa Mondovi</h1>
+            <p class="hero-subtitle">Experience living in this stunning rental property</p>
+            <a href="#gallery" class="cta-button">View Photos Gallery</a>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
         <div class="container">
-            <p>&copy; 2024 Casa Mondovi. All rights reserved.</p>
+            <h2 class="section-title">Photos Gallery</h2>
+            <p class="section-subtitle">Explore this beautiful property</p>
+            
+            <!-- Gallery Navigation -->
+            <div class="gallery-nav">
+                <button class="gallery-nav-btn active" data-gallery="main-house">Main House</button>
+                <button class="gallery-nav-btn" data-gallery="dependence">Dependence</button>
+                <button class="gallery-nav-btn" data-gallery="outdoor">Outdoor</button>
+            </div>
+
+            <!-- Main House Gallery -->
+            <div class="gallery-container" id="main-house-gallery">
+                <h3 class="gallery-main-title">Main House</h3>
+                
+                <!-- Main House Entrance -->
+                <div class="gallery-section" data-category="main_house_entrance">
+                    <h3 class="gallery-category">Entrance</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-image="assets/photos/main_house/entrance/IMG_0703.jpg">
+                            <img src="assets/photos/main_house/entrance/IMG_0703.jpg" alt="Entrance" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main House Living Room -->
+                <div class="gallery-section" data-category="main_house_living_room">
+                    <h3 class="gallery-category">Living Room</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-image="assets/photos/main_house/living_room/IMG_0664.jpg">
+                            <img src="assets/photos/main_house/living_room/IMG_0664.jpg" alt="Living Room" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-image="assets/photos/main_house/living_room/IMG_0671.jpg">
+                            <img src="assets/photos/main_house/living_room/IMG_0671.jpg" alt="Living Room" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-image="assets/photos/main_house/living_room/IMG_0674.jpg">
+                            <img src="assets/photos/main_house/living_room/IMG_0674.jpg" alt="Living Room" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-image="assets/photos/main-house/living_room/IMG_0678.jpg">
+                            <img src="assets/photos/main_house/living_room/IMG_0678.jpg" alt="Living Room" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-image="assets/photos/main-house/living_room/IMG_0683.jpg">
+                            <img src="assets/photos/main_house/living_room/IMG_0683.jpg" alt="Living Room" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main House Bathroom -->
+                <div class="gallery-section" data-category="main_house_bathroom">
+                    <h3 class="gallery-category">Bathroom</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-image="assets/photos/bathroom/IMG_0689.jpg">
+                            <img src="assets/photos/main_house/bathroom/IMG_0689.jpg" alt="Bathroom" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-image="assets/photos/bathroom/IMG_0690.jpg">
+                            <img src="assets/photos/main_house/bathroom/IMG_0690.jpg" alt="Bathroom" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main House Office -->
+                <div class="gallery-section" data-category="main_house_office">
+                    <h3 class="gallery-category">Office</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-image="assets/photos/office/IMG_0693.jpg">
+                            <img src="assets/photos/main_house/office/IMG_0693.jpg" alt="Office" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Outdoor Gallery -->
+            <div class="gallery-container" id="outdoor-gallery" style="display: none;">
+                <h3 class="gallery-main-title">Outdoor</h3>
+                
+                <!-- Terrace -->
+                <div class="gallery-section" data-category="outdoor_terrace">
+                    <h3 class="gallery-category">Terrace</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-image="assets/photos/outdoor/terrace/IMG_0752.jpg">
+                            <img src="assets/photos/outdoor/terrace/IMG_0752.jpg" alt="Garden" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dependence -->
+                <div class="gallery-section" data-category="outdoor_dependence">
+                    <h3 class="gallery-category">Dependence</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-image="assets/photos/outdoor/dependence/IMG_0656.jpg">
+                            <img src="assets/photos/outdoor/dependence/IMG_0656.jpg" alt="Terrace" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outside -->
+                <div class="gallery-section" data-category="outdoor_house">
+                    <h3 class="gallery-category">House</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-image="assets/photos/outdoor/outside/IMG_0661.jpg">
+                            <img src="assets/photos/outdoor/house/IMG_0661.jpg" alt="Pool Area" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dependence Gallery -->
+            <div class="gallery-container" id="dependence-gallery" style="display: none;">
+                <h3 class="gallery-main-title">Dependence</h3>
+                
+                <!-- Dependence Upstairs Suite -->
+                <div class="gallery-section" data-category="dependence-upstairs-suite">
+                    <h3 class="gallery-category">Upstairs Suite</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-image="assets/photos/dependence/upstairs_suite/IMG_0636.jpg">
+                            <img src="assets/photos/dependence/upstairs_suite/IMG_0636.jpg" alt="Upstairs Suite" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-image="assets/photos/dependence/upstairs_suite/IMG_0637.jpg">
+                            <img src="assets/photos/dependence/upstairs_suite/IMG_0637.jpg" alt="Upstairs Suite" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-image="assets/photos/dependence/upstairs_suite/IMG_0638.jpg">
+                            <img src="assets/photos/dependence/upstairs_suite/IMG_0638.jpg" alt="Upstairs Suite" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-image="assets/photos/dependence/upstairs_suite/IMG_0641.jpg">
+                            <img src="assets/photos/dependence/upstairs_suite/IMG_0641.jpg" alt="Upstairs Suite" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dependence Downstairs Guest Suite -->
+                <div class="gallery-section" data-category="dependence-downstairs-guest-suite">
+                    <h3 class="gallery-category">Downstairs Guest Suite</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-image="assets/photos/dependence/downstairs_guest_suite/IMG_0647.jpg">
+                            <img src="assets/photos/dependence/downstairs_guest_suite/IMG_0647.jpg" alt="Downstairs Guest Suite" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-image="assets/photos/dependence/downstairs_guest_suite/IMG_0648.jpg">
+                            <img src="assets/photos/dependence/downstairs_guest_suite/IMG_0648.jpg" alt="Downstairs Guest Suite" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-image="assets/photos/dependence/downstairs_guest_suite/IMG_0650.jpg">
+                            <img src="assets/photos/dependence/downstairs_guest_suite/IMG_0650.jpg" alt="Downstairs Guest Suite" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-image="assets/photos/dependence/downstairs_guest_suite/IMG_0652.jpg">
+                            <img src="assets/photos/dependence/downstairs_guest_suite//IMG_0652.jpg">
+                            <img src="assets/photos/dependence/downstairs_guest_suite/" alt="Downstairs Guest " alt="Downstairs Guest Suite" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-image="assets/photos/dependence/downstairs_guest_suite/IMG_0654.jpg">
+                            <img src="assets/photos/dependence/downstairs_guest_suite/IMG_0654.jpg" alt="Downstairs Guest Suite" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content">
+        <div class="lightbox-nav">
+            <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mondovi, Home for Rent</h3>
+                    <p>Experience living in this stunning rental property. Perfect for those seeking quiet and amazing nature views.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <p><i class="fas fa-envelope"></i> info@casa-mondovi.it</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Mondovi, Italy</p>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html> 
