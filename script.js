@@ -375,14 +375,21 @@ function initializeGalleryNavigation() {
     const mainHouseGallery = document.getElementById('main-house-gallery');
     const dependenceGallery = document.getElementById('dependence-gallery');
     const outdoorGallery = document.getElementById('outdoor-gallery');
+    const gallerySection = document.getElementById('gallery');
 
     navButtons.forEach(button => {
         button.addEventListener('click', function() {
             const targetGallery = this.getAttribute('data-gallery');
             
-            // Update active button
-            navButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
+            // Update active button on ALL navigation sections
+            document.querySelectorAll('.gallery-nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Add active class to all buttons with the same data-gallery value
+            document.querySelectorAll(`[data-gallery="${targetGallery}"]`).forEach(btn => {
+                btn.classList.add('active');
+            });
             
             // Hide all galleries first
             mainHouseGallery.style.display = 'none';
@@ -410,6 +417,15 @@ function initializeGalleryNavigation() {
                     outdoorGallery.classList.remove('hidden');
                 }, 10);
             }
+            
+            // Scroll to top of gallery section
+            setTimeout(() => {
+                const galleryTop = gallerySection.offsetTop - 80; // Account for navbar height
+                window.scrollTo({
+                    top: galleryTop,
+                    behavior: 'smooth'
+                });
+            }, 50);
             
             // Reinitialize scroll animations for the new gallery
             setTimeout(() => {
